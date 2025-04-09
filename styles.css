@@ -21,8 +21,7 @@ h3 {
 
 .boop, .bop {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 button {
@@ -33,6 +32,7 @@ button {
 
 h2 {
     font-size: 4.5em;
+    color: black;
 }
 
 h4 {
@@ -40,3 +40,6 @@ h4 {
     color: #993C3C;
 }
 
+a {
+    text-decoration: none;
+}
