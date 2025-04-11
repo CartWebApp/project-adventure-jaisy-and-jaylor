@@ -1,0 +1,46 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 13em;
+}
+
+h3 {
+    font-size: 2em;
+    color: #993C3C;
+}
+
+.boop, .bop {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    top: 5cap;
+}
+
+h2 {
+    font-size: 4.5em;
+    color: black;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #993C3C;
+}
+
+a {
+    text-decoration: none;
+}
