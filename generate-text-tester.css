@@ -1,0 +1,16 @@
+body {
+    background: #3498db;
+    padding: 3em;
+}
+
+.text {
+    font-size: 6vw;
+    word-spacing: 0.2em;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1em;
+    border-bottom: 1vw solid #0e6dad;
+    position: relative;
+    line-height: 1.2em;
+    
+}
