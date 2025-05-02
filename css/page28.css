@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    margin: 0%; padding: 0%;
+    width: 100%; height: 100%;
+}
+
+img {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+
+button {
+    width: 15em;
+    position: relative;
+    background-color: white;
+    border-radius: 1em;
+    left: 114rem;
+    top: 58rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+li {
+    list-style: none;
+}
