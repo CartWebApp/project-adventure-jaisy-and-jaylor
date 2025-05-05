@@ -5,6 +5,7 @@
 
 body {
     width: 100%; height: 100%;
+    background-color: black;
 }
 
 img {
@@ -20,17 +21,22 @@ header {
 }
 
 h1 {
+    color: #6a1818;
     font-size: 13em;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 6em;
     color: #993C3C;
 }
 
 .boop, .bop {
     display: flex;
     flex-direction: column;
+}
+
+.bop {
+    padding-top: 7em;
 }
 
 button {
@@ -42,7 +48,7 @@ button {
 
 h2 {
     font-size: 4.5em;
-    color: black;
+    color: #6a1818;
 }
 
 h4 {
