@@ -19,8 +19,8 @@ img {
 section {
     background-color: white;
     width: 60%;
-    padding: 2%;
-    margin-top: 3em;
+    padding: 1%;
+    margin-top: 2em;
     display: flex;
     align-self: center;
     flex-direction: column;
