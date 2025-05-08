@@ -17,5 +17,34 @@
         <button class="ton"><a href="/html/page5.html">Accept</a></button>
         <button class="but"><a href="/html/beginning4.html">Decline</a></button>
     </section>
+    
+    <style>
+        #myParagraph {
+          font-family: monospace;
+          white-space: pre; /* Keep line breaks and spaces */
+          font-size: 1.2rem;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Typing Text Example</h1>
+      <p id="myParagraph">Hmm.</p>
+    
+      <script>
+        const text = "Hello there! I'm typing this text like a person would...";
+        let index = 0;
+    
+        function typeWriter() {
+          if (index < text.length) {
+            document.getElementById("myParagraph").textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 50); // Adjust typing speed (in milliseconds)
+          }
+        }
+    
+        // Start typing as soon as the page loads
+        window.onload = typeWriter;
+      </script>
+    
 </body>
 </html>

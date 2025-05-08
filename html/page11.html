@@ -18,15 +18,35 @@
 </script>
 
 <body>
-<img src="/img/peopletalking.jpg" alt="background">
-
-<section onclick="myFunc()">
-    <p>You: You know I find it strange how our grandfather has passed away… He seemed very healthy.</p>
-    <p>Bron: I find it strange too, but anything could have happened too.</p>
-    <p>You: Yeah, you're right.</p>
-    <p>Auntie Mei: Hey, if you want to look at your grandfather's stuff you can head to the outdoor shed. He would often be out there when he was here.</p>
-    <p>Bron: Do you want me to come with you?</p>
-    <br>
+    
+    <body>
+    <img src="/img/peopletalking.jpg" alt="background">
+    
+    <section>
+        <p id="myParagraph"></p>
+        <button onclick="goToNextPage()">></button>
+    
+    
+      <script>
+        const text = " You: You know I find it strange how our grandfather has passed away… He seemed very healthy. Bron: I find it strange too, but anything could have happened too.You: Yeah, you're rightAuntie Mei: Hey, if you want to look at your grandfather's stuff you can head to the outdoor shed. He would often be out there when he was here.Bron: Do you want me to come with you?";
+        let index = 0;
+    
+        function typeWriter() {
+          const paragraph = document.getElementById("myParagraph");
+          if (index < text.length) {
+            paragraph.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 35); // typing speed
+          }
+        }
+    
+        function goToNextPage() {
+          window.location.href = "/html/page12.html";
+        }
+    
+        window.onload = typeWriter;
+      </script>
+        </section>
     <div>
         <button class="but"><a href="/html/page12.html">Yes</a></button>
         <button class="ton"><a href="/html/page19.html">No</a></button>

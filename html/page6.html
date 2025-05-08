@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/page6.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
-    <title>Page 6</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/page6.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet" />
+  <title>Page 6</title>
 </head>
 <body>
+  <img src="/img/Group-15(2).png" alt="background" />
 
-    <script>
-        function myFunc() {
-            
-        }
-    </script>
-    
-    <body>
-    <img src="/img/Group-15(2).png" alt="background">
-    
-    <section onclick="myFunc()">
-        <p>Mom: Sweetie, the family is hosting your grandfather 's funeral this coming weekend. However, your father and I cannot make it due to our schedules at work. Would you mind going to Laos by yourself? You're old enough.</p>
-    <button><a href="/html/page7.html">></a></button>
-    </section>
-    
-    </body>
-    </html>
+  <section>
+    <p id="myParagraph"></p>
+    <button onclick="goToNextPage()">></button>
+  </section>
+
+  <script>
+    const text = "Mom: Sweetie, the family is hosting your grandfather's funeral this coming weekend. However, your father and I cannot make it due to our schedules at work. Would you mind going to Laos by yourself? You're old enough.";
+    let index = 0;
+
+    function typeWriter() {
+      const paragraph = document.getElementById("myParagraph");
+      if (index < text.length) {
+        paragraph.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 35); // typing speed
+      }
+    }
+
+    function goToNextPage() {
+      window.location.href = "/html/page7.html";
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
