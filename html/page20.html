@@ -11,22 +11,34 @@
    
 </head>
 
-<script>
-    function myFunc() {
-        
-    }
-</script>
-
 <body>
 <img src="/img/0d9e074b-8bd3-42de-8eb4-589ee0fbef85 1.png" alt="background">
 
-<section onclick="myFunc()">
-    <p>When you open the door you are greeted by a bunch of boxes.</p>
-    <p>Looking at them there's only one thing else to do.</p>
-    <p>You went through each of the boxes one by one, soon coming across a familiar photo.</p>
-    <p>The family photo of when Mom was a child with Grandfather and her siblings. </p>
-<button><a href="/html/page21.html">></a></button>
-</section>
+
+<section>
+    <p id="myParagraph"></p>
+    <button onclick="goToNextPage()">></button>
+  </section>
+
+<script>
+    const text = "When you open the door you are greeted by a bunch of boxes. Looking at them there's only one thing else to do. You went through each of the boxes one by one, soon coming across a familiar photo. The family photo of when Mom was a child with Grandfather and her siblings.";
+    let index = 0;
+
+    function typeWriter() {
+      const paragraph = document.getElementById("myParagraph");
+      if (index < text.length) {
+        paragraph.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 35); // typing speed
+      }
+    }
+
+    function goToNextPage() {
+      window.location.href = "/html/page21.html";
+    }
+
+    window.onload = typeWriter;
+  </script>
 
 </body>
 </html>

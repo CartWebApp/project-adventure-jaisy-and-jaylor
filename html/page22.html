@@ -9,21 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
     <title>Page 22</title>
 </head>
-<body>
-    
-    <script>
-        function myFunc() {
-            
-        }
-    </script>
-    
     <body>
     <img src="/img/b24312cb-a40f-4fa3-b5eb-f417b124fda5 1.png" alt="background">
+
+    <section>
+        <p id="myParagraph"></p>
+        <button onclick="goToNextPage()">></button>
+      </section>
     
-    <section onclick="myFunc()">
-        <p>Startled, you scrambled to pick up the photo from the frame. </p>
-    <button><a href="/html/page23.html">></a></button>
-    </section>
+    <script>
+        const text = "Startled, you scrambled to pick up the photo from the frame. What have you done...";
+        let index = 0;
+    
+        function typeWriter() {
+          const paragraph = document.getElementById("myParagraph");
+          if (index < text.length) {
+            paragraph.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 35); // typing speed
+          }
+        }
+    
+        function goToNextPage() {
+          window.location.href = "/html/page23.html";
+        }
+    
+        window.onload = typeWriter;
+      </script>
     
     </body>
     </html>

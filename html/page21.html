@@ -11,19 +11,33 @@
 </head>
 <body>
     
-    <script>
-        function myFunc() {
-            
-        }
-    </script>
-    
     <body>
     <img src="/img/broke.png" alt="background">
+
+    <section>
+        <p id="myParagraph"></p>
+        <button onclick="goToNextPage()">></button>
+      </section>
     
-    <section onclick="myFunc()">
-        <p>Taking out the frame you accidentally drop it. *CRASH*</p>
-    <button><a href="/html/page22.html">></a></button>
-    </section>
+    <script>
+        const text = "Taking out the frame you accidentally drop it. *CRASH*";
+        let index = 0;
+    
+        function typeWriter() {
+          const paragraph = document.getElementById("myParagraph");
+          if (index < text.length) {
+            paragraph.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 35); // typing speed
+          }
+        }
+    
+        function goToNextPage() {
+          window.location.href = "/html/page22.html";
+        }
+    
+        window.onload = typeWriter;
+      </script>
     
     </body>
     </html>

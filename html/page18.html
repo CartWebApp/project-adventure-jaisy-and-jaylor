@@ -20,10 +20,30 @@
 <body>
 <img src="/img/people.png" alt="background">
 
-<section onclick="myFunc()">
-    <p>*Bron what was that. Bron' I have no idea but we should run* </p>
-    <button><a href="/html/page24.html">></a></button>
-</section>
+<section>
+    <p id="myParagraph"></p>
+    <button onclick="goToNextPage()">></button>
+  </section>
+
+<script>
+    const text = "You: Bron what was that? Bron: I have no idea but we should run.";
+    let index = 0;
+
+    function typeWriter() {
+      const paragraph = document.getElementById("myParagraph");
+      if (index < text.length) {
+        paragraph.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 35); // typing speed
+      }
+    }
+
+    function goToNextPage() {
+      window.location.href = "/html/page24.html";
+    }
+
+    window.onload = typeWriter;
+  </script>
 
 </body>
 </html>

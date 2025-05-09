@@ -19,11 +19,31 @@
     
     <body>
     <img src="/img/hi.png" alt="background">
+
+    <section>
+        <p id="myParagraph"></p>
+        <button onclick="goToNextPage()">></button>
+      </section>
     
-    <section onclick="myFunc()">
-        <p>After 30 min of back to back combat you feel exhausted and feel like giving up. You fall as she comes closer and closer. jump scare BUT you don’t die. your cousin pops up and helps you. but he brought something with him. Was that water? He splashed the woman with the water where they saw her melt into the floor. you and Bron both head back home. </p>
-    <button><a href="/html/page23.html">></a></button>
-    </section>
+    <script>
+        const text = "After 30 min of back to back combat you feel exhausted and feel like giving up. You fall as she comes closer and closer. jump scare BUT you don’t die. your cousin pops up and helps you. but he brought something with him. Was that water? He splashed the woman with the water where they saw her melt into the floor. you and Bron both head back home.";
+        let index = 0;
+    
+        function typeWriter() {
+          const paragraph = document.getElementById("myParagraph");
+          if (index < text.length) {
+            paragraph.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 35); // typing speed
+          }
+        }
+    
+        function goToNextPage() {
+          window.location.href = "/html/page23.html";
+        }
+    
+        window.onload = typeWriter;
+      </script>
     
     </body>
     </html>

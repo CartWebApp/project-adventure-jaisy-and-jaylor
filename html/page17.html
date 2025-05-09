@@ -20,11 +20,30 @@
 <body>
 <img src="/img/jump.png" alt="background">
 
-<section onclick="myFunc()">
-    <p>During the night you hear something in a bush. You go to the bush to check what’s there. 
-    </p>
-<button><a href="/html/page18.html">></a></button>
-</section>
+<section>
+    <p id="myParagraph"></p>
+    <button onclick="goToNextPage()">></button>
+  </section>
+
+<script>
+    const text = "During the night you hear something in a bush. You go to the bush to check what's there.";
+    let index = 0;
+
+    function typeWriter() {
+      const paragraph = document.getElementById("myParagraph");
+      if (index < text.length) {
+        paragraph.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 35); // typing speed
+      }
+    }
+
+    function goToNextPage() {
+      window.location.href = "/html/page18.html";
+    }
+
+    window.onload = typeWriter;
+  </script>
 
 </body>
 </html>
